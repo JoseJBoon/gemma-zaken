@@ -190,3 +190,17 @@ RGBZ. BESLUIT krijgt een optionele relatie naar ZAAK.
 
 De verwachting is dat er later vergelijkbare designkeuzes gemaakt worden voor
 andere resources, zoals bijvoorbeeld klantcontacten.
+
+## Zaak afsluiten
+
+In de huidige ZDS 1.x standaard is er nog [geen eenduidig besluit genomen over hoe een zaak wordt afgesloten](https://discussie.kinggemeenten.nl/discussie/gemma/koppelvlak-zs-dms/afsluiten-van-een-zaak). 
+
+Wij hebben gekozen voor grofweg de volgende aanpak:
+* Objecttype STATUSTYPE krijgt een nieuw attribuut: `isEindStatus` (ja/nee). Er mag maximaal 1 eindstatus zijn per ZAAKTYPE.
+* Het attribuut `Einddatum` op ZAAK wordt alleen-lezen.
+* Bij het toekennen van een STATUSTYPE met `isEindStatus=ja` aan ZAAK wordt de `ZAAK.Einddatum` automatisch ingevuld met de waarde uit `STATUS.datumStatusGezet`.
+
+Het RGBZ wordt hier op aangepast.
+
+**TODO:**
+_Of de ZAAK hierna niet meer kan worden aangepast is wellicht praktisch niet handig maar zou wel het zuiverste zijn. Het is alleen technisch niet 100% af te dekken. Je kan namelijk een document toevoegen aan een zaak, zonder dat het ZRC "dit weet" aangezien de relatie (op dit moment) ligt bij het DRC._
