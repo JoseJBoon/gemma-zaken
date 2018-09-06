@@ -28,9 +28,14 @@ en daaruit volgende gegevens die het verloop van een ZAAK (kunnen) bepalen.
 
 Bekijk de [ztc spec](https://ref.tst.vng.cloud/ztc/api/v1/schema/)
 
-
 ## Documentregistratiecomponent
 
 In de DRC worden INFORMATIEOBJECTen voor ZAAKen vastgelegd.
 
 Bekijk de [drc spec](https://ref.tst.vng.cloud/drc/api/v1/schema/)
+
+## Besluitregistratiecomponent
+
+In de BRC worden BESLUITen voor ZAAKen vastgelegd.
+
+Bekijk de [brc spec](https://ref.tst.vng.cloud/brc/api/v1/schema/)

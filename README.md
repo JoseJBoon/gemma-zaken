@@ -36,11 +36,12 @@ Zie de relevante links in dit [overzicht](./docs/content/developers/api-specific
 
 ## Snelle links
 
-**Referentiecomponenten**
+**Referentie-implementaties van componenten**
 
 * [Zaakregistratiecomponent](https://github.com/vng-Realisatie/gemma-zaakregistratiecomponent)
 * [Documentregistratiecomponent](https://github.com/vng-Realisatie/gemma-documentregistratiecomponent)
 * [Zaaktypecatalogus](https://github.com/vng-Realisatie/gemma-zaaktypecatalogus)
+* [Besluitregistratiecomponent](https://github.com/vng-Realisatie/gemma-besluitregistratiecomponent)
 
 **Ondersteunende tooling**
 

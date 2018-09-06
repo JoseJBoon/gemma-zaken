@@ -7,17 +7,19 @@ menu:
     parent: "developers"
 ---
 
-De standaard wordt opgebouwd op basis van drie componenten, elk met hun eigen
+De standaard wordt opgebouwd op basis van vier componenten, elk met hun eigen
 OAS 3.0 definities. Het gaat dan om de zaakregistratiecomponent (ZRC),
-documentregistratiecomponent (DRC) en de zaaktypecatalogus (ZTC).
+documentregistratiecomponent (DRC), zaaktypecatalogus (ZTC) en de
+besluitregistratiecomponent.
 
 De ontwikkeling van iedere component vindt plaats in een aparte git repository:
 
 * [ZRC](https://github.com/vng-Realisatie/gemma-zaakregistratiecomponent)
 * [DRC](https://github.com/VNG-Realisatie/gemma-documentregistratiecomponent)
 * [ZTC](https://github.com/VNG-Realisatie/gemma-zaaktypecatalogus)
+* [BTC](https://github.com/VNG-Realisatie/gemma-besluitregistratiecomponent)
 
-Uitgebreide documentatie per component is beschikbaar in deze repositories.
+Uitgebreide documentatie per component komt beschikbaar in deze repositories.
 Dit document is als startpunt bedoeld om snel up-and-running te zijn.
 
 ## Ontwikkelen van een applicatie die van deze componenten gebruik maakt
@@ -48,6 +50,7 @@ Je kan nu de componenten bereiken:
 * ZRC: http://localhost:8000
 * DRC: http://localhost:8001
 * ZTC: http://localhost:8002
+* BRC: http://localhost:8003
 
 **Docker Machine**
 
@@ -74,7 +77,7 @@ docker-compose down
 Je kan een superuser aanmaken voor elke service met:
 
 ```bash
-docker-compose run (zrc_web|drc_web|ztc_web) python src/manage.py createsuperuser
+docker-compose run (zrc_web|drc_web|ztc_web|brc_web) python src/manage.py createsuperuser
 ```
 
 Vervolgens kan je daarmee inloggen op http://localhost:800x/admin/ om testdata
